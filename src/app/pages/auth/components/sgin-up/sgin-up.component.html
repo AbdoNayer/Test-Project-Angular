@@ -1,0 +1,118 @@
+<div class="">
+  <div class="container">
+    <form
+      [formGroup]="signUpForm"
+      (ngSubmit)="onSubmit()"
+      class="shadow-lg rounded-2xl w-[70%] table m-auto p-4 my-[100px]"
+    >
+      <div class="my-3 overflow-hidden">
+        <label class="mb-3 block text-[#003365]" for="username">Username</label>
+        <input
+          type="text"
+          class="border border-gray-200 rounded w-full p-2"
+          formControlName="username"
+        />
+        <div
+          *ngIf="
+            signUpForm.get('username').invalid &&
+            signUpForm.get('username').touched
+          "
+        >
+          <span
+            class="text-red-600"
+            *ngIf="signUpForm.get('username').errors.required"
+            >Username is required.</span
+          >
+          <span
+            class="text-red-600"
+            *ngIf="signUpForm.get('username').errors.minlength"
+            >Username must be at least 4 characters long.</span
+          >
+        </div>
+      </div>
+
+      <div class="my-3 overflow-hidden">
+        <label class="mb-3 block text-[#003365]" for="email">Email</label>
+        <input
+          type="email"
+          class="border border-gray-200 rounded w-full p-2"
+          formControlName="email"
+        />
+        <div
+          *ngIf="
+            signUpForm.get('email').invalid && signUpForm.get('email').touched
+          "
+        >
+          <span
+            class="text-red-600"
+            *ngIf="signUpForm.get('email').errors.required"
+            >Email is required.</span
+          >
+          <span
+            class="text-red-600"
+            *ngIf="signUpForm.get('email').errors.email"
+            >Invalid email format.</span
+          >
+        </div>
+      </div>
+
+      <div class="my-3 overflow-hidden">
+        <label class="mb-3 block text-[#003365]" for="password">Password</label>
+        <input
+          type="password"
+          class="border border-gray-200 rounded w-full p-2"
+          formControlName="password"
+        />
+        <div
+          *ngIf="
+            signUpForm.get('password').invalid &&
+            signUpForm.get('password').touched
+          "
+        >
+          <span
+            class="text-red-600"
+            *ngIf="signUpForm.get('password').errors.required"
+            >Password is required.</span
+          >
+          <span
+            class="text-red-600"
+            *ngIf="signUpForm.get('password').errors.minlength"
+            >Password must be at least 6 characters long.</span
+          >
+        </div>
+      </div>
+
+      <div class="my-3 overflow-hidden">
+        <label class="mb-3 block text-[#003365]" for="confirmPassword"
+          >Confirm Password</label
+        >
+        <input
+          type="password"
+          class="border border-gray-200 rounded w-full p-2"
+          formControlName="confirmPassword"
+        />
+        <div
+          *ngIf="
+            signUpForm.get('confirmPassword').invalid &&
+            signUpForm.get('confirmPassword').touched
+          "
+        >
+          <span
+            class="text-red-600"
+            *ngIf="signUpForm.get('confirmPassword').errors.required"
+          >
+            Confirmation password is required.
+          </span>
+        </div>
+      </div>
+
+      <button
+        class="my-[40px] bg-[#ff6a51] text-[#fff] rounded-[5px] w-[200px] table m-auto p-3 disabled:opacity-[0.5]"
+        type="submit"
+        [disabled]="signUpForm.invalid"
+      >
+        Sign Up
+      </button>
+    </form>
+  </div>
+</div>

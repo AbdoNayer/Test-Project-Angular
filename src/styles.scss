@@ -1,4 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Font App
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+// Style Scroll App
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+// Body App
+body {
+  font-family: "Noto Kufi Arabic", sans-serif !important;
+}
+
+// html {
+//   scroll-behavior: smooth;
+// }
