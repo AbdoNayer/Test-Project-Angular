@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 // Font App
-@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
 // Owl Carousel
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
@@ -17,9 +17,61 @@
 
 // Body App
 body {
-  font-family: "Noto Kufi Arabic", sans-serif !important;
+  font-family: "Cairo", sans-serif !important;
 }
 
 // html {
 //   scroll-behavior: smooth;
 // }
+
+
+.bg-image {
+  -webkit-animation: zoom-b 20s linear infinite alternate; /* Safari 4+ */
+  -moz-animation:    zoom-b 20s linear infinite alternate; /* Fx 5+ */
+  -o-animation:      zoom-b 20s linear infinite alternate; /* Opera 12+ */
+  animation:         zoom-b 20s linear infinite alternate; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes zoom-b {
+	0% {
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1) translateZ(1px);
+  }
+	100% {
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2) translateZ(1px);
+  }
+}
+
+@-moz-keyframes zoom-b {
+	0% {
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1) translateZ(1px);
+  }
+	100% {
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2) translateZ(1px);
+  }
+}
+
+@-o-keyframes zoom-b {
+	0% {
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1) translateZ(1px);
+  }
+	100% {
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2) translateZ(1px);
+  }
+}
+
+@keyframes zoom-b {
+	0% {
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1) translateZ(1px);
+  }
+	100% {
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2) translateZ(1px);
+  }
+}

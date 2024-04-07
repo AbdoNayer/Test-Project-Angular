@@ -12,28 +12,65 @@ export class SliderHomeComponent {
     touchDrag: true,
     pullDrag: true,
     dots: false,
+    autoplay: true,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    autoplaySpeed: 800,
+    autoplayTimeout: 5000,
     navSpeed: 700,
-    navText: ['<i class="fa-solid fa-chevron-right"></i>', '<i class="fa-solid fa-chevron-left"></i>'],
+    nav: false,
+    navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
     responsive: {
       0: {
         items: 1
       },
       400: {
-        items: 2
+        items: 1
       },
       740: {
-        items: 3
+        items: 1
       },
       940: {
-        items: 4
+        items: 1
       }
     },
-    nav: true
   }
   slides = [
     {
       id: 1,
-      image : 'https://img.freepik.com/premium-vector/background-with-colorful-shopping-bags-vector-illustration-sale-discount-concept_653240-59.jpg'
+      image : '../../../../assets/img/0001.jpg',
+      info: {
+        title : 'Fashion Item 1',
+        dis : 'Description for Fashion Item 1',
+        btn : 'More'
+      }
+    },
+    {
+      id: 2,
+      image : '../../../../assets/img/0002.jpg',
+      info: {
+        title : 'Fashion Item 2',
+        dis : 'Description for Fashion Item 2',
+        btn : 'More'
+      }
+    },
+    {
+      id: 3,
+      image : '../../../../assets/img/0003.jpg',
+      info: {
+        title : 'Fashion Item 3',
+        dis : 'Description for Fashion Item 3',
+        btn : 'More'
+      }
+    },
+    {
+      id: 4,
+      image : '../../../../assets/img/0004.jpg',
+      info: {
+        title : 'Fashion Item 4',
+        dis : 'Description for Fashion Item 4',
+        btn : 'More'
+      }
     }
   ]
 }

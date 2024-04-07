@@ -6,6 +6,7 @@ import { SginInComponent } from './components/sgin-in/sgin-in.component';
 import { AuthComponent } from './auth.component';
 import { SginUpComponent } from './components/sgin-up/sgin-up.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -49,6 +50,10 @@ const routes: Routes = [
     SginUpComponent,
     ForgetPasswordComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [
+    CommonModule, 
+    RouterModule.forChild(routes),
+    ReactiveFormsModule,
+  ],
 })
 export class AuthModule {}
