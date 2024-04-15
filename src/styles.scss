@@ -24,6 +24,14 @@ body {
 //   scroll-behavior: smooth;
 // }
 
+.over-scroll{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+  contain: size style layout;
+}
+
 
 .bg-image {
   -webkit-animation: zoom-b 20s linear infinite alternate; /* Safari 4+ */

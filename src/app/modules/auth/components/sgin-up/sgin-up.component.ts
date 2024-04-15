@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../models/login';
 import { confirmPasswordValidator } from '../../validations/app-validators';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-sgin-up',
@@ -14,7 +15,7 @@ export class SginUpComponent implements OnInit {
   sginUpForm: FormGroup;
   user = new User();
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private authService: AuthService) {}
 
   ngOnInit(): void {
 
@@ -29,18 +30,23 @@ export class SginUpComponent implements OnInit {
       email                 : ['', [Validators.required, Validators.email]],
       password              : ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword       : ['', Validators.required]
-    }, { validator: confirmPasswordValidator('password', 'confirmPassword') });
+    },
+    {
+      validator: confirmPasswordValidator
+    });
   }
 
   onSubmit() {
-    if (this.sginUpForm.valid) {
-      // Form is valid, proceed with submission
-      console.log(this.sginUpForm.value);
-      // Here you can send the form data to your backend or perform other actions
-    } else {
-      // Form is invalid, display validation errors
-      // Angular will automatically display validation errors in the template
-    }
+    this.authService.sginUp(this.sginUpForm.valid).subscribe(
+      response => {
+        // Handle successful login response
+        console.log('Login successful', response);
+      },
+      error => {
+        // Handle login error
+        console.error('Login error', error);
+      }
+    );
   }
 
 }

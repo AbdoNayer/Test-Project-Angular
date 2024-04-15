@@ -6,24 +6,45 @@
                 <img src="assets/img/logo.png" alt="" class="m-auto mb-4 max-w-[140px]">
                 <p class="text-gray-500">log in with your data that you entered during your registration</p>
             </div>
-            <form action="" class="pt-5">
+            <form action="" class="pt-5" [formGroup]='sginInForm' (ngSubmit)="onSubmit()">        
                 <div class="my-4">
-                    <label class="mb-3 block">
+                    <label for="email" class="mb-3 block">
                         <strong>Email</strong> 
                         <span class="text-red-600 ms-1">*</span>
                     </label>
                     <div class="">
-                        <input class="border rounded-lg w-full p-3" type="text" placeholder="">
+                        <input formControlName="email" class="border rounded-lg w-full p-3" id="email" type="text" placeholder="">
+                    </div>
+                    <div *ngIf="sginInForm.get('email').invalid && sginInForm.get('email').touched">
+                        <span class="text-red-600 block" *ngIf="sginInForm.get('email').errors.required">
+                            Email is required.
+                        </span>
+                        <span class="text-red-600 block" *ngIf="sginInForm.get('email').errors.email">
+                            Invalid email format.
+                        </span>
                     </div>
                 </div>
                 <div class="my-4">
-                    <label class="mb-3 block">
+                    <label for="password" class="mb-3 block">
                         <strong>Password</strong> 
                         <span class="text-red-600 ms-1">*</span>
                     </label>
                     <div class="">
-                        <input class="border rounded-lg w-full p-3" type="password" placeholder="">
+                        <input formControlName="password" class="border rounded-lg w-full p-3" id="password" type="password" placeholder="">
                     </div>
+                    <div *ngIf="sginInForm.get('password').invalid && sginInForm.get('password').touched">
+                        <span class="text-red-600 block" *ngIf="sginInForm.get('password').errors.required">
+                            Password is required.
+                        </span>
+                        <span class="text-red-600 block" *ngIf="sginInForm.get('password').errors.minlength">
+                            Password must be at least 6 characters long.
+                        </span>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center py-4">
+                    <button type="submit" [disabled]="sginInForm.invalid" class="bg-[#fb6d3a] rounded text-white px-[20px] py-[10px] w-[200px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] disabled:opacity-65">
+                        Sgin In
+                    </button>
                 </div>
                 <div class="flex items-center justify-between py-4">
                     <div class="flex items-center">
