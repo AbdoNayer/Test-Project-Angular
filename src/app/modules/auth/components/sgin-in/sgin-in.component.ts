@@ -29,12 +29,17 @@ export class SginInComponent implements OnInit {
   }
 
   onSubmit() {
-    this.authService.sginUp(this.sginInForm.valid).subscribe(
-      response => {
+    const obj = {
+      username: 'kminchelle',
+      password: '0lelplR',
+      expiresInMins: 30,
+    };
+    this.authService.sginIn(obj).subscribe(
+      (response) => {
         // Handle successful login response
         console.log('Login successful', response);
       },
-      error => {
+      (error) => {
         // Handle login error
         console.error('Login error', error);
       }
