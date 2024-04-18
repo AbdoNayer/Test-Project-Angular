@@ -8,43 +8,43 @@
                 <ul class="flex items-center">
                     <li>
                         <a routerLink="/" class="text-gray-400 mx-6 relative transition duration-500 hover:text-[#fb6d3a] after:block after:content-[''] after:absolute after:h-[2px] after:bg-[#fb6d3a] after:left-0 after:w-[50%] after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                            Home
+                            {{ 'HEADER.Home' | translate }}
                         </a>
                     </li>
                     <li>
                         <a routerLink="/about" class="text-gray-400 mx-6 relative transition duration-500 hover:text-[#fb6d3a] after:block after:content-[''] after:absolute after:h-[2px] after:bg-[#fb6d3a] after:left-0 after:w-[50%] after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                            About
+                            {{ 'HEADER.About' | translate }}
                         </a>
                     </li>
                     <li>
                         <a routerLink="/categories" class="text-gray-400 mx-6 relative transition duration-500 hover:text-[#fb6d3a] after:block after:content-[''] after:absolute after:h-[2px] after:bg-[#fb6d3a] after:left-0 after:w-[50%] after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                            Categories
+                            {{ 'HEADER.Categories' | translate }}
                         </a>
                     </li>
                     <li>
                         <a routerLink="/offers" class="text-gray-400 mx-6 relative transition duration-500 hover:text-[#fb6d3a] after:block after:content-[''] after:absolute after:h-[2px] after:bg-[#fb6d3a] after:left-0 after:w-[50%] after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                            Offers
+                            {{ 'HEADER.Offers' | translate }}
                         </a>
                     </li>
                     <li>
                         <a routerLink="/blogs" class="text-gray-400 mx-6 relative transition duration-500 hover:text-[#fb6d3a] after:block after:content-[''] after:absolute after:h-[2px] after:bg-[#fb6d3a] after:left-0 after:w-[50%] after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                            Blogs
+                            {{ 'HEADER.Blogs' | translate }}
                         </a>
                     </li>
                     <li>
                         <a routerLink="/contact" class="text-gray-400 mx-6 relative transition duration-500 hover:text-[#fb6d3a] after:block after:content-[''] after:absolute after:h-[2px] after:bg-[#fb6d3a] after:left-0 after:w-[50%] after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                            Contact
+                            {{ 'HEADER.Contact' | translate }}
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="">
+            <div class="flex items-center">
                 <div *ngIf="!isLogin" class="">
                     <a routerLink="auth/sgin-in" class="ms-4 bg-black rounded text-white px-[20px] py-[5px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
-                        Sgin In
+                        {{ 'HEADER.SginUp' | translate }}
                     </a>
                     <a routerLink="auth/sgin-up" class="ms-4 bg-[#fb6d3a] rounded text-white px-[20px] py-[5px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
-                        Sgin Up
+                        {{ 'HEADER.SginUp' | translate }}
                     </a>
                 </div>
                 <div *ngIf="isLogin" class="flex items-center">
@@ -58,10 +58,10 @@
                     <a routerLink="auth/sgin-in" class="ms-4 relative bg-[#fb6d3a] rounded text-white w-[40px] h-[40px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
                         <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     </a>
-                    <a class="ms-4 relative bg-[#fb6d3a] rounded text-white w-[40px] h-[40px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
-                        AR
-                    </a>
                 </div>
+                <button class="ms-4 relative bg-[#fb6d3a] rounded text-white w-[40px] h-[40px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]" (click)="changeLang(setLang === 'ar' ? 'en' : 'ar')">
+                    {{ setLang === 'ar' ? 'EN' : 'AR' }}
+                </button>
             </div>
         </div>
     </div>

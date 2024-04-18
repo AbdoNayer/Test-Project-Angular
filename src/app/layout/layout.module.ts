@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LayoutComponent } from './layout.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -31,6 +32,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [LayoutComponent, HeaderComponent, FooterComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, TranslateModule, RouterModule.forChild(routes)],
 })
 export class LayoutModule {}

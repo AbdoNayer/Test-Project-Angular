@@ -3,6 +3,13 @@
     "APP_NAME": ""
   },
   "HEADER" : {
-    "" : ""
+    "Home" : "Home",
+    "About" : "About Us",
+    "Categories" : "Categories",
+    "Offers" : "Offers",
+    "Blogs" : "Blogs",
+    "Contact" : "Contact Us",
+    "SignIn" : "Sign In",
+    "SginUp" : "Sgin Up"
   }
 }
