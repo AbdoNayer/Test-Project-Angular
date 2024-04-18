@@ -4,6 +4,7 @@ import { NotFoundPageModule } from './pages/not-found-page/not-found-page.module
 import { AuthModule } from './modules/auth/auth.module';
 import { UserModule } from './modules/user/user.module';
 import { LayoutModule } from './layout/layout.module';
+import { AuthGuard } from './shared/guard/guard.guard';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
   },
   {
     path: '',
+    canActivate:[AuthGuard],
     loadChildren: () =>
       import('./layout/layout.module').then((m) => LayoutModule),
   },
