@@ -16,7 +16,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () =>
       import('./layout/layout.module').then((m) => LayoutModule),
-    // canActivate:[AuthGuard],
+      canActivate:[AuthGuard],
   },
   {
     path: 'auth',

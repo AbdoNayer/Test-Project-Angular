@@ -46,7 +46,7 @@ export class SginInComponent implements OnInit {
         console.log('Login successful', response);
         localStorage.setItem("userToken", response.token);
         this.saveUserService.saveCurrentUser();
-        this.router.navigate(['/']);
+        // this.router.navigate(['/']);
       },
       (error) => {
         // Handle login error
