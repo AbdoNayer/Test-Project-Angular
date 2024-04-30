@@ -1,4 +1,18 @@
 <div class="container">
-    <app-slider-home></app-slider-home>
-    <a routerLink="/auth/sgin-up">dsds</a>
+    <app-slider-category [slide]="imageSlider"></app-slider-category>
+    <div class="">
+        <div class="flex items-center justify-between px-4">
+            <h3 class="text-[23px]">المنتجات</h3>
+            <select class="border px-[5px] rounded-md" (change)="onSelectOption($event.target.value)">
+                <option value="all" selected>الكل</option>
+                <option value="smartphones">الهواتف</option>
+                <option value="laptops">اللاب توب</option>
+                <option value="skincare">العناية بالبشرة</option>
+                <option value="fragrances">العطور</option>
+            </select>
+        </div>
+        <div class="grid justify-between md:grid-cols-1 lg:grid-cols-1 grid-cols-3 relative z-10 pt-9">
+            <app-item-category *ngFor="let item of items" [item]="item"></app-item-category>
+        </div>
+    </div>
 </div>

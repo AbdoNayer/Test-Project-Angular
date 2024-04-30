@@ -42,14 +42,13 @@ export class SginInComponent implements OnInit {
     };
     this.authService.sginIn(obj).subscribe(
       (response) => {
-        // Handle successful login response
-        console.log('Login successful', response);
+        // Handle successful response
         localStorage.setItem("userToken", response.token);
         this.saveUserService.saveCurrentUser();
         // this.router.navigate(['/']);
       },
       (error) => {
-        // Handle login error
+        // Handle error
         console.error('Login error', error);
       }
     );

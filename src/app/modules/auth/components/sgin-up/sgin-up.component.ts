@@ -40,11 +40,9 @@ export class SginUpComponent implements OnInit {
     this.authService.sginUp(this.sginUpForm.valid).subscribe(
       response => {
         // Handle successful login response
-        console.log('Login successful', response);
       },
       error => {
         // Handle login error
-        console.error('Login error', error);
       }
     );
   }

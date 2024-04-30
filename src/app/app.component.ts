@@ -33,10 +33,8 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
         this.loading = true;
-        console.log('true')
       } else if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
         this.loading = false;
-        console.log('false')
       }
     });
   }

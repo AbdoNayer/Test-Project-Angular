@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { product } from './models/home';
+import { BehaviorSubject } from 'rxjs';
+import { HomeService } from './services/home.service';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +9,62 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  
-  constructor() {}
 
-  ngOnInit() {}
+  items = new BehaviorSubject<product[]>([]);
+  imageSlider = [];
+
+  constructor(private homeService: HomeService) {}
+
+  ngOnInit(): void {
+    this.getImageSlider();
+    this.getItems();
+  }
+
+  getImageSlider() {
+    this.homeService.getSliderHome().subscribe(
+      (response) => {
+        // Handle successful response
+        this.imageSlider = response.images;
+      },
+      (error) => {
+        // Handle error
+        console.error('error', error);
+      }
+    );
+  }
+
+  getItems() {
+    this.homeService.getItems().subscribe(
+      (response) => {
+        // Handle successful response
+        this.items = response.products;
+      },
+      (error) => {
+        // Handle error
+        console.error('error', error);
+      }
+    );
+  }
+
+  getProductsBySearch(option: string): void {
+    this.homeService.searchProducts(option).subscribe(
+      (response) => {
+        // Handle successful response
+        this.items = response.products;
+      },
+      (error) => {
+        // Handle error
+        console.error('error', error);
+      }
+    );
+  }
+
+  onSelectOption(option: string): void {
+    if(option === 'all'){
+      this.getItems()
+    }else {
+      this.getProductsBySearch(option)
+    }
+  }
 
 }

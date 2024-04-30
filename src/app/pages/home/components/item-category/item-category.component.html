@@ -1,0 +1,19 @@
+<div class="overflow-hidden m-4">
+    <div class="bg-white rounded-lg text-center border overflow-hidden">
+        <div class="border-b">
+            <img [src]="item.thumbnail" alt="" class="m-auto w-full h-[300px]">
+        </div>        
+        <div class="p-[20px]">
+            <div class="">
+                <h4 class="font-bold text-[16px] mb-3">{{item.title}}</h4>
+                <p class="text-[#808080] max-w-[290px] line-clamp-2 h-[70px] text-[15px] m-auto">{{item.description}}</p>
+            </div>
+            <div class="flex items-center justify-between mt-3">
+                <span class="text-red-600 font-bold">{{item.price}} $</span>
+                <button class="ms-4 relative bg-[#fb6d3a] rounded text-white px-[10px] h-[40px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+                    اضف للمتجر
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

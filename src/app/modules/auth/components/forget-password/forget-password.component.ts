@@ -29,8 +29,6 @@ export class ForgetPasswordComponent implements OnInit {
   onSubmit() {
     if (this.forgetPasswordForm.valid) {
       
-      console.log(this.forgetPasswordForm.value);
-      
     } else {
       
     }
