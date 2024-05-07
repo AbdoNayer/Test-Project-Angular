@@ -14,6 +14,8 @@ export class ItemCategoryComponent {
   ngOnInit(): void {
   }
 
-  
+  addCart(id:any){
+    console.log('id', id)
+  }
 
 }

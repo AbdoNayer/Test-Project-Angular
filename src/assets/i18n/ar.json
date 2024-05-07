@@ -2,6 +2,16 @@
   "GENERAL": {
     "APP_NAME": ""
   },
+  "SELECT_FILTER" : {
+    "Categories" : "المنتجات"
+  },
+  "ITEMS" : {
+    "Add_To_Cart" : "اضف للمتجر"
+  },
+  "TOAST" : {
+    "Toast_Success" : "تم الاضافه بنجاح",
+    "Toast_Error" : "حصل خطأ ما .. المحاوله مرة أخري"
+  },
   "HEADER" : {
     "Home" : "الرئيسية",
     "About" : "من نحن",

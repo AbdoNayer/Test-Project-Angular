@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { initFlowbite } from 'flowbite';
 import * as AOS from "aos";
-import 'aos/dist/aos.css';
 //For Translation
 import { TranslateService } from '@ngx-translate/core';
 import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    initFlowbite();
     AOS.init();
 
     this.router.events.subscribe(event => {

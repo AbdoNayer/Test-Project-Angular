@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { TranslateModule } from '@ngx-translate/core';
 import { HomeComponent } from './home.component';
 import { SharedModule } from '../../shared/shared.module';
 import { ItemCategoryComponent } from './components/item-category/item-category.component';
@@ -19,6 +20,7 @@ export const routes: Routes = [
   imports: [
     SharedModule,
     CarouselModule,
+    TranslateModule,
     CommonModule, 
     RouterModule.forChild(routes)
   ],

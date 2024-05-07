@@ -12,6 +12,29 @@ export class HomeComponent implements OnInit {
 
   items = new BehaviorSubject<product[]>([]);
   imageSlider = [];
+  options = [
+    {
+      value : 'all',
+      name : 'الكل'
+    },
+    {
+      value : 'smartphones',
+      name : 'الهواتف'
+    },
+    {
+      value : 'اللاب توب',
+      name : 'laptops'
+    },
+    {
+      value : 'skincare',
+      name : 'العناية بالبشرة'
+    },
+    {
+      value : 'fragrances',
+      name : 'العطور'
+    },
+  ];
+  toastValue = 'error'
 
   constructor(private homeService: HomeService) {}
 

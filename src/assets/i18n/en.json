@@ -2,6 +2,16 @@
   "GENERAL": {
     "APP_NAME": ""
   },
+  "SELECT_FILTER" : {
+    "Categories" : "Categories"
+  },
+  "ITEMS" : {
+    "Add_To_Cart" : "Add Cart"
+  },
+  "TOAST" : {
+    "Toast_Success" : "Successfully Added",
+    "Toast_Error" : "Something Went Wrong .. Try Again"
+  },
   "HEADER" : {
     "Home" : "Home",
     "About" : "About Us",
