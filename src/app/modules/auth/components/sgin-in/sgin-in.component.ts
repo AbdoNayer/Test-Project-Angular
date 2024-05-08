@@ -17,7 +17,7 @@ export class SginInComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder, 
-    private authService: AuthService, 
+    private authService: AuthService,
     private router: Router,
     private saveUserService: SaveUserService) {}
 
@@ -43,9 +43,9 @@ export class SginInComponent implements OnInit {
     this.authService.sginIn(obj).subscribe(
       (response) => {
         // Handle successful response
+        this.router.navigate(['/']);
         localStorage.setItem("userToken", response.token);
         this.saveUserService.saveCurrentUser();
-        // this.router.navigate(['/']);
       },
       (error) => {
         // Handle error

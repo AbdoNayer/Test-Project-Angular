@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { initFlowbite } from 'flowbite';
 import * as AOS from "aos";
 //For Translation
 import { TranslateService } from '@ngx-translate/core';
@@ -28,10 +27,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    initFlowbite();
     AOS.init();
 
     this.router.events.subscribe(event => {
+      console.log('event', event)
       if (event instanceof NavigationStart) {
         this.loading = true;
       } else if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {

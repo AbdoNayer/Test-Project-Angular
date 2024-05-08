@@ -34,7 +34,6 @@ export class HomeComponent implements OnInit {
       name : 'العطور'
     },
   ];
-  toastValue = 'error'
 
   constructor(private homeService: HomeService) {}
 
@@ -60,7 +59,7 @@ export class HomeComponent implements OnInit {
     this.homeService.getItems().subscribe(
       (response) => {
         // Handle successful response
-        this.items = response.products;
+        this.items.next(response.products);
       },
       (error) => {
         // Handle error
@@ -73,7 +72,7 @@ export class HomeComponent implements OnInit {
     this.homeService.searchProducts(option).subscribe(
       (response) => {
         // Handle successful response
-        this.items = response.products;
+        this.items.next(response.products);
       },
       (error) => {
         // Handle error

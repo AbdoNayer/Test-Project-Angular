@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
 import { NotFoundPageComponent } from './not-found-page.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 export const routes: Routes = [
   {
@@ -12,11 +13,12 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [NotFoundPageComponent],
   imports: [
     SharedModule, 
     CommonModule, 
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    TranslateModule
   ],
 })
 export class NotFoundPageModule {}

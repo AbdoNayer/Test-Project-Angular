@@ -14,7 +14,6 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
       if (this.saveUserService.currentUser.getValue() != null ) {
-        // this.router.navigate(['/']);
         return true;
       }else{
         this.router.navigate(['auth/sgin-in']);

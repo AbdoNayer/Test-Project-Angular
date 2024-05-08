@@ -1,6 +1,9 @@
 {
   "GENERAL": {
-    "APP_NAME": ""
+    "APP_NAME": "",
+    "No_Data" : "No Data Found",
+    "No_Found_Page" : "No Data For This Page",
+    "Go_To_Home" : "Go To Home"
   },
   "SELECT_FILTER" : {
     "Categories" : "Categories"
@@ -11,6 +14,8 @@
   "TOAST" : {
     "Toast_Success" : "Successfully Added",
     "Toast_Error" : "Something Went Wrong .. Try Again"
+  },
+  "TEXT" : {
   },
   "HEADER" : {
     "Home" : "Home",

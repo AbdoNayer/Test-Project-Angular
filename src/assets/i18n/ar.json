@@ -1,6 +1,9 @@
 {
   "GENERAL": {
-    "APP_NAME": ""
+    "APP_NAME": "",
+    "No_Data" : "لا توجد بيانات",
+    "No_Found_Page" : "لا توجد بيانات لهذة الصفحة",
+    "Go_To_Home" : "الذهاب الي الرئيسية"
   },
   "SELECT_FILTER" : {
     "Categories" : "المنتجات"

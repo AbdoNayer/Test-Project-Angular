@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TranslateModule } from '@ngx-translate/core';
 import { HomeComponent } from './home.component';
-import { SharedModule } from '../../shared/shared.module';
 import { ItemCategoryComponent } from './components/item-category/item-category.component';
 import { SliderCategoryComponent } from './components/slider-category/slider-category.component';
+import { EmptyDataComponent } from '../../shared/components/empty-data/empty-data.component';
 
 export const routes: Routes = [
   {
@@ -18,10 +18,10 @@ export const routes: Routes = [
 @NgModule({
   declarations: [HomeComponent, ItemCategoryComponent, SliderCategoryComponent],
   imports: [
-    SharedModule,
     CarouselModule,
     TranslateModule,
-    CommonModule, 
+    CommonModule,
+    EmptyDataComponent,
     RouterModule.forChild(routes)
   ],
 })

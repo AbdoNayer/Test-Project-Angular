@@ -3,11 +3,10 @@
     <div class="flex items-center justify-center w-full h-screen bg-black/70 absolute top-0 right-0">
         <div class="shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg overflow-hidden bg-white p-5 w-[550px] text-center" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
             <img src="assets/img/error.png" alt="" class="m-auto my-4 max-w-[140px]">
-            <p>Not Found Page</p>
-            <a routerLink="/" class="my-4 inline-block bg-[#fb6d3a] rounded text-white px-[20px] py-[5px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
-                Go To Home
+            <p>{{ 'GENERAL.No_Found_Page' | translate }}</p>
+            <a routerLink="/" class="my-4 inline-block bg-[#fb6d3a] rounded text-white px-[20px] py-[5px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] cursor-pointer">
+                {{ 'GENERAL.Go_To_Home' | translate }}
             </a>
-            <a routerLink="/auth/sgin-up">dsds</a>
         </div>
     </div>
 </div>

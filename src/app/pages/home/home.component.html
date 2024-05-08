@@ -8,10 +8,8 @@
             </select>
         </div>
         <div class="grid justify-between md:grid-cols-1 lg:grid-cols-1 grid-cols-3 relative z-10 pt-9">
-            <app-item-category *ngFor="let item of items" [item]="item"></app-item-category>
+            <app-item-category *ngFor="let item of items | async" [item]="item"></app-item-category>
         </div>
-        <app-empty-data *ngIf="!items"></app-empty-data>
+        <app-empty-data *ngIf="(items | async)?.length == 0"></app-empty-data>
     </div>
 </div>
-
-<app-toast [toastValue]="toastValue"></app-toast>
