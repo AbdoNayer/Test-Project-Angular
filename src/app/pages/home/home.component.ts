@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { product } from './models/home';
 import { BehaviorSubject } from 'rxjs';
 import { HomeService } from './services/home.service';
+import dataApi from '../../../assets/JSON_API/data.json';
 
 @Component({
   selector: 'app-home',
@@ -12,28 +13,7 @@ export class HomeComponent implements OnInit {
 
   items = new BehaviorSubject<product[]>([]);
   imageSlider = [];
-  options = [
-    {
-      value : 'all',
-      name : 'الكل'
-    },
-    {
-      value : 'smartphones',
-      name : 'الهواتف'
-    },
-    {
-      value : 'اللاب توب',
-      name : 'laptops'
-    },
-    {
-      value : 'skincare',
-      name : 'العناية بالبشرة'
-    },
-    {
-      value : 'fragrances',
-      name : 'العطور'
-    },
-  ];
+  categorys = [];
 
   constructor(private homeService: HomeService) {}
 
@@ -46,7 +26,8 @@ export class HomeComponent implements OnInit {
     this.homeService.getSliderHome().subscribe(
       (response) => {
         // Handle successful response
-        this.imageSlider = response.images;
+        this.categorys = response.sliderCategory;
+        console.log('response', response.sliderCategory)
       },
       (error) => {
         // Handle error
@@ -81,11 +62,11 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  onSelectOption(option: string): void {
-    if(option === 'all'){
+  onGetProductByCategory(val: string): void {
+    if(val === 'all'){
       this.getItems()
     }else {
-      this.getProductsBySearch(option)
+      this.getProductsBySearch(val)
     }
   }
 

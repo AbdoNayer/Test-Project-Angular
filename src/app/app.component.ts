@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from "aos";
+import * as AOS from 'aos';
 //For Translation
 import { TranslateService } from '@ngx-translate/core';
 import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
@@ -30,7 +30,6 @@ export class AppComponent implements OnInit {
     AOS.init();
 
     this.router.events.subscribe(event => {
-      console.log('event', event)
       if (event instanceof NavigationStart) {
         this.loading = true;
       } else if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {

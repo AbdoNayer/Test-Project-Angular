@@ -1,0 +1,72 @@
+{
+    "sliderCategory" : [
+        {
+            "id" : 1,
+            "name" : "Smart Phone",
+            "disc" : "",
+            "image" : "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
+        },
+        {
+            "id" : 2,
+            "name" : "LapTop",
+            "disc" : "",
+            "image" : "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
+        },
+        {
+            "id" : 3,
+            "name" : "Fragrances",
+            "disc" : "",
+            "image" : "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+        },
+        {
+            "id" : 4,
+            "name" : "Skincare",
+            "disc" : "",
+            "image" : "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg"
+        },
+        {
+            "id" : 5,
+            "name" : "Groceries",
+            "disc" : "",
+            "image" : "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg"
+        },
+        {
+            "id" : 6,
+            "name" : "Home Decoration",
+            "disc" : "",
+            "image" : "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg"
+        }
+    ],
+    "filterCategory" : [
+        {
+            "id" : 1,
+            "name" : "Smart Phone",
+            "image" : "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
+        },
+        {
+            "id" : 2,
+            "name" : "LapTop",
+            "image" : "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
+        },
+        {
+            "id" : 3,
+            "name" : "Fragrances",
+            "image" : "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+        },
+        {
+            "id" : 4,
+            "name" : "Skincare",
+            "image" : "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg"
+        },
+        {
+            "id" : 5,
+            "name" : "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg",
+            "image" : "Groceries"
+        },
+        {
+            "id" : 6,
+            "name" : "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg",
+            "image" : "Home Decoration"
+        }
+    ]
+}

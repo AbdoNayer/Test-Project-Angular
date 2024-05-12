@@ -1,17 +1,10 @@
-<div class="overflow-hidden rounded-lg my-9">
+<div class="overflow-hidden rounded-lg mb-9">
     <owl-carousel-o [options]="customOptions">
 
         <ng-container *ngFor="let item of slide">
             <ng-template carouselSlide [id]="">
-                <div class="h-[400px] w-[80%] m-auto overflow-hidden rounded-2xl relative">
-                    <img [src]="item" [alt]="" [title]="" class="h-[500px]">
-                    <!-- <div class="absolute top-[50%] translate-y-[-50%] left-0 px-9">
-                        <div class="bg-white p-9">
-                            <h1 class="m-0">{{image.info.title}}</h1>
-                            <p class="my-3">{{image.info.dis}}</p>
-                            <button class="bg-[#fb6d3a] rounded text-white px-[20px] py-[6px] text-[12px]">{{slide.info.btn}}</button>
-                        </div>
-                    </div> -->
+                <div class="h-[550px] w-full overflow-hidden relative">
+                    <img [src]="item" [alt]="" [title]="" class="h-full w-full">
                 </div>
             </ng-template>
         </ng-container>

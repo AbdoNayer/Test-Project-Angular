@@ -18,11 +18,11 @@ export class ItemCategoryComponent {
   }
 
   addCart(item:any){
+    var messageError      = (this.translate.currentLang == 'en') ? 'This Item exist Cart' : 'هذا المنتج موجود بالفعل';
+    var messageSuccess    = (this.translate.currentLang == 'en') ? 'This Item Add To Cart' : 'تم اضافه المنتج بنجاح';
     if("cart" in localStorage){
       this.cartProducts = JSON.parse(localStorage.getItem("cart"))
       const exist = this.cartProducts.find(val => val.id == item.id);
-      var messageError      = (this.translate.currentLang == 'en') ? 'This Item exist Cart' : 'هذا المنتج موجود بالفعل';
-      var messageSuccess    = (this.translate.currentLang == 'en') ? 'This Item Add To Cart' : 'تم اضافه المنتج بنجاح';
       if(exist){
         this.toasterService.error(messageError);
       }else {
