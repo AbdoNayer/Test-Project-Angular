@@ -7,6 +7,7 @@ import { HomeComponent } from './home.component';
 import { ItemCategoryComponent } from './components/item-category/item-category.component';
 import { SliderCategoryComponent } from './components/slider-category/slider-category.component';
 import { EmptyDataComponent } from '../../shared/components/empty-data/empty-data.component';
+import { ItemProductComponent } from './components/item-product/item-product.component';
 
 export const routes: Routes = [
   {
@@ -16,7 +17,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent, ItemCategoryComponent, SliderCategoryComponent],
+  declarations: [HomeComponent, ItemCategoryComponent, SliderCategoryComponent, ItemProductComponent],
   imports: [
     CarouselModule,
     TranslateModule,

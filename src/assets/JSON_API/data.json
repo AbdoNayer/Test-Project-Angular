@@ -2,71 +2,77 @@
     "sliderCategory" : [
         {
             "id" : 1,
-            "name" : "Smart Phone",
+            "title" : "Smart Phone",
             "disc" : "",
             "image" : "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
         },
         {
             "id" : 2,
-            "name" : "LapTop",
+            "title" : "LapTop",
             "disc" : "",
             "image" : "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
         },
         {
             "id" : 3,
-            "name" : "Fragrances",
+            "title" : "Fragrances",
             "disc" : "",
             "image" : "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
         },
         {
             "id" : 4,
-            "name" : "Skincare",
+            "title" : "Skincare",
             "disc" : "",
             "image" : "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg"
         },
         {
             "id" : 5,
-            "name" : "Groceries",
+            "title" : "Groceries",
             "disc" : "",
             "image" : "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg"
         },
         {
             "id" : 6,
-            "name" : "Home Decoration",
+            "title" : "Home Decoration",
             "disc" : "",
             "image" : "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg"
         }
     ],
-    "filterCategory" : [
+    "itemsCategory" : [
         {
             "id" : 1,
-            "name" : "Smart Phone",
+            "title" : "Smart Phone",
+            "value" : "smartphones",
             "image" : "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
         },
         {
             "id" : 2,
-            "name" : "LapTop",
+            "title" : "LapTop",
+            "value" : "laptops",
             "image" : "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
         },
         {
             "id" : 3,
-            "name" : "Fragrances",
+            "title" : "Fragrances",
+            "value" : "fragrances",
             "image" : "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
         },
         {
             "id" : 4,
-            "name" : "Skincare",
+            "title" : "Skincare",
+            "value" : "skincare",
             "image" : "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg"
         },
         {
             "id" : 5,
-            "name" : "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg",
-            "image" : "Groceries"
+            "title" : "Groceries",
+            "value" : "groceries",
+            "image" : "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg"
         },
         {
             "id" : 6,
-            "name" : "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg",
-            "image" : "Home Decoration"
+            "title" : "Home Decoration",
+            "value" : "home-decoration",
+            "image" : "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg"
         }
     ]
 }

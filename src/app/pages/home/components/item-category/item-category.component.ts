@@ -1,6 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { ToasterService } from '../../../../shared/services/toaster.service';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-item-category',
@@ -10,31 +8,15 @@ import { TranslateService } from '@ngx-translate/core';
 export class ItemCategoryComponent {
 
   @Input() item: any;
-  cartProducts:any[] = [];
+  @Output() getValue = new EventEmitter<string>();
 
-  constructor(private toasterService: ToasterService,private translate : TranslateService) {}
+  constructor() {}
 
   ngOnInit(): void {
   }
 
-  addCart(item:any){
-    var messageError      = (this.translate.currentLang == 'en') ? 'This Item exist Cart' : 'هذا المنتج موجود بالفعل';
-    var messageSuccess    = (this.translate.currentLang == 'en') ? 'This Item Add To Cart' : 'تم اضافه المنتج بنجاح';
-    if("cart" in localStorage){
-      this.cartProducts = JSON.parse(localStorage.getItem("cart"))
-      const exist = this.cartProducts.find(val => val.id == item.id);
-      if(exist){
-        this.toasterService.error(messageError);
-      }else {
-        this.toasterService.success(messageSuccess);
-        this.cartProducts.push(item);
-        localStorage.setItem('cart', JSON.stringify(this.cartProducts))
-      }
-    }else {
-      this.toasterService.success(messageSuccess);
-      this.cartProducts.push(item);
-      localStorage.setItem('cart', JSON.stringify(this.cartProducts))
-    }
+  onGetValue(val:any){
+    this.getValue.emit(val);
   }
 
 }

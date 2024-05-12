@@ -7,20 +7,24 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HomeService {
-  private apiUrl      = environment.BASE_URL;
-  private apiUrlJSON  = environment.URL_JSON;
+  private apiUrl            = environment.BASE_URL;
+  private apiUrlJSON        = environment.URL_JSON;
 
   constructor(private http: HttpClient) {}
 
-  getSliderHome(): Observable<any> {
+  getSliderImages(): Observable<any> {
     return this.http.get(this.apiUrlJSON);
   }
 
-  getItems(): Observable<any> {
+  getItemsCategories(): Observable<any> {
+    return this.http.get(this.apiUrlJSON);
+  }
+
+  getItemsProducts(): Observable<any> {
     return this.http.get(`${this.apiUrl}products`);
   }
 
-  searchProducts(query: string): Observable<any> {
+  searchProductsByCategory(query: string): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}products/category/${query}`);
   }
 }

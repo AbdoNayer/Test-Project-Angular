@@ -1,10 +1,10 @@
-<div class="overflow-hidden rounded-lg mb-9">
+<div class="overflow-hidden mb-9">
     <owl-carousel-o [options]="customOptions">
 
-        <ng-container *ngFor="let item of slide">
+        <ng-container *ngFor="let item of slide | async">
             <ng-template carouselSlide [id]="">
-                <div class="h-[550px] w-full overflow-hidden relative">
-                    <img [src]="item" [alt]="" [title]="" class="h-full w-full">
+                <div class="h-[600px] w-full overflow-hidden relative">
+                    <img [src]="item.image" [alt]="" [title]="" class="h-full w-full">
                 </div>
             </ng-template>
         </ng-container>

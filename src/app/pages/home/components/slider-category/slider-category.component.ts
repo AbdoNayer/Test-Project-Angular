@@ -40,9 +40,11 @@ export class SliderCategoryComponent {
 
   @Input() slide: any;
 
+
   constructor() {}
 
   ngOnInit(): void {
+    console.log('mmmm', this.slide.value)
   }
 
   

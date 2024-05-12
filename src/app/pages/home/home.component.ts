@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { product } from './models/home';
+import { Products, Slider, Categories } from './models/home';
 import { BehaviorSubject } from 'rxjs';
 import { HomeService } from './services/home.service';
-import dataApi from '../../../assets/JSON_API/data.json';
 
 @Component({
   selector: 'app-home',
@@ -11,62 +10,95 @@ import dataApi from '../../../assets/JSON_API/data.json';
 })
 export class HomeComponent implements OnInit {
 
-  items = new BehaviorSubject<product[]>([]);
-  imageSlider = [];
-  categorys = [];
+  itemsProducts           = new BehaviorSubject<Products[]>([]);
+  sliderImages            = new BehaviorSubject<Slider[]>([]);
+  itemsCategories         = new BehaviorSubject<Categories[]>([]);
+
+  defaultItemCategory = {
+    "id" : 1,
+    "title" : "All",
+    "value" : "all",
+    "image" : "https://icons.veryicon.com/png/o/application/a1/default-application.png"
+  }
 
   constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
     this.getImageSlider();
-    this.getItems();
+    this.getProducts();
+    this.getCategories();
   }
 
   getImageSlider() {
-    this.homeService.getSliderHome().subscribe(
-      (response) => {
-        // Handle successful response
-        this.categorys = response.sliderCategory;
-        console.log('response', response.sliderCategory)
-      },
-      (error) => {
-        // Handle error
-        console.error('error', error);
+    // this.loaderService.showLoader();
+    this.homeService.getSliderImages().subscribe(
+      {
+        next: (response) => {
+          this.sliderImages.next(response.sliderCategory);
+        },
+        error: (err) => {
+          console.log('err', err)
+        },
+        complete: () => {
+          
+        }
       }
     );
   }
 
-  getItems() {
-    this.homeService.getItems().subscribe(
-      (response) => {
-        // Handle successful response
-        this.items.next(response.products);
-      },
-      (error) => {
-        // Handle error
-        console.error('error', error);
+  getProducts() {
+    this.homeService.getItemsProducts().subscribe(
+      {
+        next: (response) => {
+          this.itemsProducts.next(response.products);
+        },
+        error: (err) => {
+          console.log('err', err)
+        },
+        complete: () => {
+          
+        }
       }
     );
   }
 
-  getProductsBySearch(option: string): void {
-    this.homeService.searchProducts(option).subscribe(
-      (response) => {
-        // Handle successful response
-        this.items.next(response.products);
-      },
-      (error) => {
-        // Handle error
-        console.error('error', error);
+  getCategories() {
+    this.homeService.getItemsCategories().subscribe(
+      {
+        next: (response) => {
+          this.itemsCategories.next(response.itemsCategory);
+        },
+        error: (err) => {
+          console.log('err', err)
+        },
+        complete: () => {
+          
+        }
+      }
+    );
+  }
+
+  getProductsByCategory(option: string): void {
+    this.homeService.searchProductsByCategory(option).subscribe(
+      {
+        next: (response) => {
+          this.itemsProducts.next(response.products);
+        },
+        error: (err) => {
+          console.log('err', err)
+        },
+        complete: () => {
+          
+        }
       }
     );
   }
 
   onGetProductByCategory(val: string): void {
     if(val === 'all'){
-      this.getItems()
+      this.getProducts()
     }else {
-      this.getProductsBySearch(val)
+      this.getProductsByCategory(val)
     }
   }
 
