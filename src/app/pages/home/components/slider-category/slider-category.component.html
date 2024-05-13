@@ -4,7 +4,14 @@
         <ng-container *ngFor="let item of slide | async">
             <ng-template carouselSlide [id]="">
                 <div class="h-[600px] w-full overflow-hidden relative">
-                    <img [src]="item.image" [alt]="" [title]="" class="h-full w-full">
+                    <img [src]="item.image" [alt]="" [title]="" class="h-full w-full border-b">
+                    <div class="over-info overflow-hidden p-[20px] rounded-lg absolute top-[50%] text-center max-w-[500px] right-0 left-0 m-auto translate-y-[-50%] bg-white/[.90]">
+                        <h3 class="text-[20px] font-bold">{{ item.title }}</h3>
+                        <p class="my-3">{{ item.disc }}</p>
+                        <a  class="relative bg-[#fb6d3a] rounded text-white w-[200px] m-auto h-[40px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+                            {{ 'GENERAL.Show_More' | translate }}
+                        </a>
+                    </div>
                 </div>
             </ng-template>
         </ng-container>

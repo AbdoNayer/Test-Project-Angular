@@ -3,7 +3,8 @@
     "APP_NAME": "",
     "No_Data" : "لا توجد بيانات",
     "No_Found_Page" : "لا توجد بيانات لهذة الصفحة",
-    "Go_To_Home" : "الذهاب الي الرئيسية"
+    "Go_To_Home" : "الذهاب الي الرئيسية",
+    "Show_More" : "مشاهدة المزيد"
   },
   "SELECT_FILTER" : {
     "Categories" : "الأقسام"
@@ -20,7 +21,6 @@
     "About" : "من نحن",
     "Categories" : "الأقسام",
     "Offers" : "العروض",
-    "Blogs" : "المنتجات",
     "Contact" : "تواصل معنا",
     "SignIn" : "تسجيل دخول",
     "SignUp" : "حساب جديد"

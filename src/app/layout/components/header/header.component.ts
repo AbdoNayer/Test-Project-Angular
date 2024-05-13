@@ -9,8 +9,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
 
-  isLogin:boolean   = false;
-  setLang           = localStorage.getItem('langShopping')
+  isLogin:boolean       = false;
+  setLang               = localStorage.getItem('langShopping');
+  valueCartItem:any     = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')).length : 0;
 
 
   constructor(private _SaveUserService: SaveUserService, private translate : TranslateService){

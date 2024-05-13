@@ -10,6 +10,8 @@ export class ItemCategoryComponent {
   @Input() item: any;
   @Output() getValue = new EventEmitter<string>();
 
+  active:any = '';
+
   constructor() {}
 
   ngOnInit(): void {
@@ -17,6 +19,7 @@ export class ItemCategoryComponent {
 
   onGetValue(val:any){
     this.getValue.emit(val);
+    this.active = val;
   }
 
 }

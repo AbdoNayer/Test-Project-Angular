@@ -3,7 +3,8 @@
     "APP_NAME": "",
     "No_Data" : "No Data Found",
     "No_Found_Page" : "No Data For This Page",
-    "Go_To_Home" : "Go To Home"
+    "Go_To_Home" : "Go To Home",
+    "Show_More" : "Show More"
   },
   "SELECT_FILTER" : {
     "Categories" : "Categories"
@@ -22,7 +23,6 @@
     "About" : "About Us",
     "Categories" : "Categories",
     "Offers" : "Offers",
-    "Blogs" : "Blogs",
     "Contact" : "Contact Us",
     "SignIn" : "Sign In",
     "SignUp" : "Sgin Up"
