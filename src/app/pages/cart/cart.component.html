@@ -1,6 +1,6 @@
 <div class="py-5 my-5">
   <div class="container">
-    <div class="">
+    <div *ngIf="cartProducts.length > 0">
       <table class="border-collapse border border-slate-500 w-full text-center">
         <thead>
           <tr class="bg-gray-200">
@@ -31,12 +31,13 @@
             <td class="border border-gray-300 p-2">
               <div class="flex items-center justify-center">
                 <button
+                  (click)="onEditItem(item)"
                   class="mx-2 relative bg-[#fb6d3a] rounded text-white w-[35px] h-[35px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
                 >
                   <i class="fa-solid fa-pencil text-[12px]"></i>
                 </button>
                 <button
-                  (click)="openDialog(item)"
+                  (click)="onRemoveItem(item)"
                   class="mx-2 relative bg-red-600 rounded text-white w-[35px] h-[35px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
                 >
                   <i class="fa-solid fa-trash text-[12px]"></i>
@@ -47,5 +48,6 @@
         </tbody>
       </table>
     </div>
+    <app-empty-data *ngIf="cartProducts.length == 0"></app-empty-data>
   </div>
 </div>

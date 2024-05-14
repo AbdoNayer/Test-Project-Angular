@@ -12,7 +12,6 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoadingPageComponent } from './shared/components/loading-page/loading-page.component';
-import { CartComponent } from './pages/cart/cart.component';
 
 // Translate Step 2
 export function createTranslateLoader(http: HttpClient) {
@@ -21,8 +20,7 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CartComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

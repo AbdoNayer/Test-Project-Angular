@@ -12,9 +12,7 @@ export class DialogRemoveItemComponent {
     @Inject(MAT_DIALOG_DATA) public item
   ) {}
 
-  ngOnInit() {
-    console.log(this.item.item); // Access the data passed to the dialog
-  }
+  ngOnInit() {}
 
   onNoClick(): void {
     this.dialogRef.close(this.item.item.id);

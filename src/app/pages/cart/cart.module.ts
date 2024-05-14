@@ -6,6 +6,7 @@ import { DialogRemoveItemComponent } from './components/dialog-remove-item/dialo
 import { DialogEditItemComponent } from './components/dialog-edit-item/dialog-edit-item.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TranslateModule } from '@ngx-translate/core';
+import { EmptyDataComponent } from '../../shared/components/empty-data/empty-data.component';
 
 export const routes: Routes = [
   {
@@ -15,7 +16,13 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [DialogRemoveItemComponent, DialogEditItemComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), MatDialogModule, TranslateModule],
+  declarations: [CartComponent, DialogRemoveItemComponent, DialogEditItemComponent],
+  imports: [
+    CommonModule,
+    EmptyDataComponent,
+    MatDialogModule,
+    TranslateModule,
+    RouterModule.forChild(routes),
+  ],
 })
 export class CartModule {}

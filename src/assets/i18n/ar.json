@@ -22,8 +22,10 @@
   },
   "DIALOG" : {
     "Text_Remove_Item": "هل تريد حذف المنتج ؟",
+    "Edit_Product": "تعديل المنتج",
     "Cancel": "إالغاء",
-    "Yes": "نعم"
+    "Yes": "نعم",
+    "Edit": "تعديل"
   },
   "TOAST": {
     "Toast_Success": "تم الاضافه بنجاح",

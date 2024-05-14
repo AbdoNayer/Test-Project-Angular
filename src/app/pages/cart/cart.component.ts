@@ -3,6 +3,7 @@ import { ToasterService } from '../../shared/services/toaster.service';
 import { TranslateService } from '@ngx-translate/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogRemoveItemComponent } from './components/dialog-remove-item/dialog-remove-item.component';
+import { DialogEditItemComponent } from './components/dialog-edit-item/dialog-edit-item.component';
 
 @Component({
   selector: 'app-cart',
@@ -22,28 +23,42 @@ export class CartComponent {
 
   ngOnInit(): void {}
 
-  openDialog(item): void {
+  onRemoveItem(item): void {
     const dialogRef = this.dialog.open(DialogRemoveItemComponent, {
       width: '400px',
       data: { item },
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      // Get Data From LocalStorage
-      const itemProducts = JSON.parse(localStorage.getItem('cart'));
-      // Filter Data To Remove Item From List
-      const updatedData = itemProducts.filter((item) => item.id !== result);
-      // Set Data New To LocalStorage & Table List
-      localStorage.setItem('cart', JSON.stringify(updatedData));
-      this.cartProducts = updatedData;
-      // Toaster Message
-      var messageSuccess =
-        this.translate.currentLang == 'en'
-          ? 'Item Successfully Deleted'
-          : 'تم حذف المنتج بنجاح';
-      // Toaster
-      this.toasterService.success(messageSuccess);
+      if (result) {
+        // Get Data From LocalStorage
+        const itemProducts = JSON.parse(localStorage.getItem('cart'));
+        // Filter Data To Remove Item From List
+        const updatedData = itemProducts.filter((item) => item.id !== result);
+        // Set Data New To LocalStorage & Table List
+        localStorage.setItem('cart', JSON.stringify(updatedData));
+        this.cartProducts = updatedData;
+        // Toaster Message
+        var messageSuccess =
+          this.translate.currentLang == 'en'
+            ? 'Item Successfully Deleted'
+            : 'تم حذف المنتج بنجاح';
+        // Toaster
+        this.toasterService.success(messageSuccess);
+      }
     });
   }
 
+  onEditItem(item): void {
+    const dialogRef = this.dialog.open(DialogEditItemComponent, {
+      width: '700px',
+      data: { item },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        
+      }
+    });
+  }
 }

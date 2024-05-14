@@ -1,1 +1,35 @@
-<p>dialog-edit-item works!</p>
+<div class="w-full p-4">
+  <div mat-dialog-content>
+    <h4 class="font-bold text-[25px] text-black">
+      {{ "DIALOG.Edit_Product" | translate }}
+    </h4>
+    <form action="" class="py-4">
+      <div class="mb-3">
+        <label for="" class="">اسم المنتج</label>
+        <input
+          type="text"
+          placeholder=""
+          class="w-full px-2 h-[40px] border rounded"
+        />
+      </div>
+    </form>
+  </div>
+  <div
+    mat-dialog-actions
+    class="flex !items-center !justify-center w-full max-w-full"
+  >
+    <button
+      class="mx-2 relative bg-[#fb6d3a] rounded text-white w-[100px] h-[35px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+      (click)="onNoClick()"
+    >
+      {{ "DIALOG.Edit" | translate }}
+    </button>
+    <button
+      class="mx-2 relative bg-gray-500 rounded text-white w-[100px] h-[35px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+      mat-dialog-close
+      cdkFocusInitial
+    >
+      {{ "DIALOG.Cancel" | translate }}
+    </button>
+  </div>
+</div>

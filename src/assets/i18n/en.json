@@ -22,8 +22,10 @@
   },
   "DIALOG": {
     "Text_Remove_Item": "Do You Want Delet this Item ?",
+    "Edit_Product": "Edit Product",
     "Cancel": "Cancel",
-    "Yes": "Yes"
+    "Yes": "Yes",
+    "Edit": "Edit"
   },
   "TOAST": {
     "Toast_Success": "Successfully Added",
