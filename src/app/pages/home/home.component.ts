@@ -15,10 +15,10 @@ export class HomeComponent implements OnInit {
   itemsCategories         = new BehaviorSubject<Categories[]>([]);
 
   defaultItemCategory = {
-    "id" : 1,
-    "title" : "All",
-    "value" : "all",
-    "image" : "https://icons.veryicon.com/png/o/application/a1/default-application.png"
+    "id"        : 1,
+    "title"     : "All",
+    "value"     : "all",
+    "image"     : "https://icons.veryicon.com/png/o/application/a1/default-application.png"
   }
 
   constructor(private homeService: HomeService) {}

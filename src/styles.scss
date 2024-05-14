@@ -5,5 +5,6 @@
 @use './assets//styles/components/toast.scss' as *;
 @use './assets//styles/components/app.scss' as *;
 
-
-
+body, html {
+  font-family: "Cairo", sans-serif !important;
+}

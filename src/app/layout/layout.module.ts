@@ -29,7 +29,14 @@ const routes: Routes = [
       {
         path: 'contact',
         loadChildren: () =>
-          import('../pages/contact/contact.module').then((m) => m.ContactModule),
+          import('../pages/contact/contact.module').then(
+            (m) => m.ContactModule
+          ),
+      },
+      {
+        path: 'cart',
+        loadChildren: () =>
+          import('../pages/cart/cart.module').then((m) => m.CartModule),
       },
     ],
   },
