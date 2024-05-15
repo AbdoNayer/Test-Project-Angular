@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ToasterService } from '../../../../shared/services/toaster.service';
 import { TranslateService } from '@ngx-translate/core';
+import { HomeService } from '../../services/home.service';
 
 @Component({
   selector: 'app-item-product',
@@ -11,7 +12,11 @@ export class ItemProductComponent {
   @Input() item: any;
   cartProducts:any[] = [];
 
-  constructor(private toasterService: ToasterService,private translate : TranslateService) {}
+  constructor(private toasterService: ToasterService,
+              private translate : TranslateService,
+              private homeService: HomeService ) {
+
+    }
 
   ngOnInit(): void {
   }
@@ -28,12 +33,18 @@ export class ItemProductComponent {
         this.toasterService.success(messageSuccess);
         this.cartProducts.push(item);
         
-        localStorage.setItem('cart', JSON.stringify(this.cartProducts))
+        localStorage.setItem('cart', JSON.stringify(this.cartProducts));
+        localStorage.setItem('counter', JSON.stringify(this.cartProducts.length));
+        this.homeService.counter.next(this.cartProducts.length);
       }
     }else {
       this.toasterService.success(messageSuccess);
       this.cartProducts.push(item);
       localStorage.setItem('cart', JSON.stringify(this.cartProducts))
+      localStorage.setItem('counter', JSON.stringify(this.cartProducts.length));
+      this.homeService.counter.next(this.cartProducts.length);
+
+
     }
   }
 }

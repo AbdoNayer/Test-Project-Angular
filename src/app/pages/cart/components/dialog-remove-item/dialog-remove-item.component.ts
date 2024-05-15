@@ -15,6 +15,10 @@ export class DialogRemoveItemComponent {
   ngOnInit() {}
 
   onNoClick(): void {
-    this.dialogRef.close(this.item.item.id);
+    if(this.item.item){
+      this.dialogRef.close(this.item.item.id);
+    }else{
+      this.dialogRef.close('done');
+    }
   }
 }

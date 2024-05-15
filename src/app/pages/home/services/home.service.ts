@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +9,11 @@ import { Observable } from 'rxjs';
 export class HomeService {
   private apiUrl            = environment.BASE_URL;
   private apiUrlJSON        = environment.URL_JSON;
+  counterValue              = JSON.parse(localStorage.getItem('counter'));
+  counter: BehaviorSubject<number> = new BehaviorSubject<number>(this.counterValue);
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+  ) {}
 
   getSliderImages(): Observable<any> {
     return this.http.get(this.apiUrlJSON);

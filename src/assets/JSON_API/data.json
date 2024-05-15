@@ -39,16 +39,16 @@
     ],
     "itemsCategory" : [
         {
-            "id" : 1,
-            "title" : "Smart Phone",
-            "value" : "smartphones",
-            "image" : "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
-        },
-        {
             "id" : 2,
             "title" : "LapTop",
             "value" : "laptops",
             "image" : "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
+        },
+        {
+            "id" : 1,
+            "title" : "Smart Phone",
+            "value" : "smartphones",
+            "image" : "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
         },
         {
             "id" : 3,

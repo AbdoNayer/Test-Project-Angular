@@ -1,6 +1,6 @@
 <div class="w-full p-4">
   <div mat-dialog-content class="text-center">
-    <p class="font-bold text-[25px] text-black">{{ 'DIALOG.Text_Remove_Item' | translate }}</p>
+    <p class="font-bold text-[25px] text-black">{{this.item.title}}</p>
   </div>
   <div mat-dialog-actions class="flex !items-center !justify-center w-full max-w-full">
     <button class="mx-2 relative bg-[#fb6d3a] rounded text-white w-[100px] h-[35px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]" (click)="onNoClick()">{{ 'DIALOG.Yes' | translate }}</button>

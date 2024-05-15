@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SaveUserService } from '../../../modules/auth/services/save-user.service';
 import { TranslateService } from '@ngx-translate/core';
+import { HomeService } from '../../../pages/home/services/home.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,9 @@ export class HeaderComponent {
   valueCartItem:any     = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')).length : 0;
 
 
-  constructor(private _SaveUserService: SaveUserService, private translate : TranslateService){
+  constructor(private _SaveUserService: SaveUserService,
+               private translate : TranslateService,
+                private homeService : HomeService){
 
     _SaveUserService.currentUser.subscribe(() => {
       if(_SaveUserService.currentUser.getValue() != null){
@@ -24,6 +27,10 @@ export class HeaderComponent {
       }
     });
 
+    this.homeService.counter.subscribe((res: any) => {
+      this.valueCartItem =  res
+      console.log(res)
+    })
   }
 
   changeLang(lang:any){
