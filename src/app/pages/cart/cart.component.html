@@ -1,6 +1,17 @@
 <div class="py-5 my-5">
   <div class="container">
     <div *ngIf="cartProducts.length > 0">
+      <div class="flex items-center justify-between mb-7">
+        <h4 class="font-bold text-[20px]">{{ 'DIALOG.All_Products' | translate }}</h4>
+        <button
+            (click)="removeAllCart()"
+            class="relative bg-red-600 rounded text-white px-3 h-[40px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+          >
+            <i class="fa-solid fa-trash text-[12px]"></i>
+            <span class="mx-1">{{ 'DIALOG.Remove_All_Products' | translate }}</span>
+          </button>
+    </div>
+    <div>
       <table class="border-collapse border border-slate-500 w-full text-center">
         <thead>
           <tr class="bg-gray-200">
@@ -47,6 +58,7 @@
           </tr>
         </tbody>
       </table>
+    </div>
     </div>
     <app-empty-data *ngIf="cartProducts.length == 0"></app-empty-data>
   </div>

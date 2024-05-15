@@ -22,6 +22,8 @@
   },
   "DIALOG": {
     "Text_Remove_Item": "Do You Want Delet this Item ?",
+    "Remove_All_Products": "Remove All Product",
+    "All_Products": "All Products",
     "Edit_Product": "Edit Product",
     "Cancel": "Cancel",
     "Yes": "Yes",

@@ -27,6 +27,7 @@ export class ItemProductComponent {
       }else {
         this.toasterService.success(messageSuccess);
         this.cartProducts.push(item);
+        
         localStorage.setItem('cart', JSON.stringify(this.cartProducts))
       }
     }else {

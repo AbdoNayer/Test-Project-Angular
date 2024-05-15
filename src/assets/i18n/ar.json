@@ -22,6 +22,8 @@
   },
   "DIALOG" : {
     "Text_Remove_Item": "هل تريد حذف المنتج ؟",
+    "Remove_All_Products": "حذف كل المنتجات",
+    "All_Products": "كل المنتجات",
     "Edit_Product": "تعديل المنتج",
     "Cancel": "إالغاء",
     "Yes": "نعم",

@@ -61,4 +61,16 @@ export class CartComponent {
       }
     });
   }
+
+  removeAllCart():void {
+    // Set Data New To LocalStorage & Table List
+    localStorage.removeItem('cart');
+    this.cartProducts = [];
+    var messageSuccess =
+          this.translate.currentLang == 'en'
+            ? 'Items Successfully Deleted'
+            : 'تم حذف كل المنتجات بنجاح';
+        // Toaster
+        this.toasterService.success(messageSuccess);
+  }
 }
