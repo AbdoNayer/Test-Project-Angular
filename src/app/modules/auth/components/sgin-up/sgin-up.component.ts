@@ -35,9 +35,9 @@ export class SginUpComponent implements OnInit {
       validator: confirmPasswordValidator
     });
   }
-
+//Object assign
   onSubmit() {
-    this.authService.sginUp(this.sginUpForm.valid).subscribe(
+    this.authService.sginUp(this.sginUpForm.value).subscribe(
       response => {
         // Handle successful login response
       },
