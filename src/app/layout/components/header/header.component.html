@@ -52,9 +52,9 @@
                     <a  routerLink="user/profile" class="ms-4 relative bg-[#fb6d3a] rounded text-white w-[40px] h-[40px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
                         <i class="fa-solid fa-user"></i>
                     </a>
-                    <a routerLink="auth/sgin-in" class="ms-4 relative bg-[#fb6d3a] rounded text-white w-[40px] h-[40px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+                    <button (click)="logOut()" class="ms-4 relative bg-[#fb6d3a] rounded text-white w-[40px] h-[40px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
                         <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </a>
+                    </button>
                 </div>
                 <button class="ms-4 relative bg-[#fb6d3a] rounded text-white w-[40px] h-[40px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]" (click)="changeLang(setLang === 'ar' ? 'en' : 'ar')">
                     {{ setLang === 'ar' ? 'EN' : 'AR' }}

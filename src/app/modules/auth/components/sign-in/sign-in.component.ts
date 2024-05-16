@@ -7,30 +7,28 @@ import { SaveUserService } from '../../services/save-user.service';
 
 @Component({
   selector: 'app-sgin-in',
-  templateUrl: './sgin-in.component.html',
-  styleUrl: './sgin-in.component.scss'
+  templateUrl: './sign-in.component.html',
+  styleUrl: './sign-in.component.scss',
 })
 export class SginInComponent implements OnInit {
-
-  sginInForm: FormGroup;
+  signInForm: FormGroup;
   user = new User();
 
   constructor(
-    private fb: FormBuilder, 
+    private fb: FormBuilder,
     private authService: AuthService,
     private router: Router,
-    private saveUserService: SaveUserService) {}
+    private saveUserService: SaveUserService
+  ) {}
 
   ngOnInit(): void {
-
     this.initForm();
-
   }
 
-  initForm(){
-    this.sginInForm = this.fb.group({
-      email                 : ['', [Validators.required, Validators.email]],
-      password              : ['', [Validators.required]],
+  initForm() {
+    this.signInForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
     });
   }
 
@@ -44,7 +42,7 @@ export class SginInComponent implements OnInit {
       (response) => {
         // Handle successful response
         this.router.navigate(['/']);
-        localStorage.setItem("userToken", response.token);
+        localStorage.setItem('userToken', response.token);
         this.saveUserService.saveCurrentUser();
       },
       (error) => {
@@ -53,5 +51,4 @@ export class SginInComponent implements OnInit {
       }
     );
   }
-
 }

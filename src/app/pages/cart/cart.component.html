@@ -17,6 +17,7 @@
             <th class="border border-gray-300 p-3">{{ 'TABLE.Product_Number' | translate }}</th>
             <th class="border border-gray-300 p-3">{{ 'TABLE.Product_Image' | translate }}</th>
             <th class="border border-gray-300 p-3">{{ 'TABLE.Product_Title' | translate }}</th>
+            <th class="border border-gray-300 p-3">{{ 'TABLE.Product_Price' | translate }}</th>
             <th class="border border-gray-300 p-3">{{ 'TABLE.Section_Name' | translate }}</th>
             <th class="border border-gray-300 p-3">{{ 'TABLE.Details' | translate }}</th>
             <th class="border border-gray-300 p-3">{{ 'TABLE.Setting' | translate }}</th>
@@ -32,6 +33,7 @@
               />
             </td>
             <td class="border border-gray-300 p-2">{{ item.title }}</td>
+            <td class="border border-gray-300 p-2"><span class="text-red-500 font-bold">{{ item.price }} $</span></td>
             <td class="border border-gray-300 p-2">{{ item.category }}</td>
             <td class="border border-gray-300 p-2">
               <p class="max-w-[200px] line-clamp-1 m-auto">
@@ -44,7 +46,7 @@
                   (click)="onEditItem(item)"
                   class="mx-2 relative bg-[#fb6d3a] rounded text-white w-[35px] h-[35px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
                 >
-                  <i class="fa-solid fa-pencil text-[12px]"></i>
+                  <i class="fa-regular fa-eye text-[12px]"></i>
                 </button>
                 <button
                   (click)="onRemoveItem(item)"

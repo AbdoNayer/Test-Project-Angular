@@ -7,26 +7,11 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrl: './dialog-edit-item.component.scss',
 })
 export class DialogEditItemComponent {
+  setLang = localStorage.getItem('langShopping');
   constructor(
     public dialogRef: MatDialogRef<DialogEditItemComponent>,
     @Inject(MAT_DIALOG_DATA) public item
   ) {}
 
-  ngOnInit() {console.log('item -------------', this.item.item)}
-
-  onNoClick(): void {
-    this.dialogRef.close(this.item.item);
-  }
-
-  selectFile(event: any) {
-		var reader = new FileReader();
-		reader.readAsDataURL(event.target.files[0]);
-		
-		reader.onload = (_event) => {
-      console.log('result image -------------', reader.result)
-      // this.f['thumbnail'].patchValue(reader.result);
-      // this.changeDetectorRef.detectChanges();
-		}
-	}
-
+  ngOnInit() {}
 }

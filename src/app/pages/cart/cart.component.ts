@@ -58,7 +58,7 @@ export class CartComponent {
   onEditItem(item): void {
     const dialogRef = this.dialog.open(DialogEditItemComponent, {
       width: '700px',
-      data: { item, title : this.translate.currentLang == 'en' ? 'Edit Product' : 'تعديل المنتج' },
+      data: { item, title : this.translate.currentLang == 'en' ? 'Details Product' : 'تفاصيل المنتج' },
     });
 
     dialogRef.afterClosed().subscribe((result) => {

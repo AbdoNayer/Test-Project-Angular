@@ -9,7 +9,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 export class HomeService {
   private apiUrl            = environment.BASE_URL;
   private apiUrlJSON        = environment.URL_JSON;
-  counterValue              = JSON.parse(localStorage.getItem('counter'));
+  counterValue              = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('counter')) : 0;
   counter: BehaviorSubject<number> = new BehaviorSubject<number>(this.counterValue);
 
   constructor(private http: HttpClient,

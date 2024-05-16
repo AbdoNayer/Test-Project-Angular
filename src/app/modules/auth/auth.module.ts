@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
-import { SginInComponent } from './components/sgin-in/sgin-in.component';
 import { AuthComponent } from './auth.component';
-import { SginUpComponent } from './components/sgin-up/sgin-up.component';
-import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
+import { SginInComponent } from './components/sign-in/sign-in.component';
+import { SginUpComponent } from './components/sign-up/sign-up.component';
 
 const routes: Routes = [
   {
@@ -15,45 +15,28 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'sgin-in',
+        redirectTo: 'sign-in',
         pathMatch: 'full',
       },
       {
         path: 'sgin-in',
-        loadChildren: () =>
-          import('./components/sgin-in/sgin-in.module').then(
-            (m) => m.SginInModule
-          ),
+        component: SginInComponent,
       },
       {
         path: 'sgin-up',
-        loadChildren: () =>
-          import('./components/sgin-up/sgin-up.module').then(
-            (m) => m.SginUpModule
-          ),
-      },
-      {
-        path: 'forget-password',
-        loadChildren: () =>
-          import('./components/forget-password/forget-password.module').then(
-            (m) => m.ForgetPasswordModule
-          ),
+        component: SginUpComponent,
       },
     ],
   },
 ];
 
 @NgModule({
-  declarations: [
-    AuthComponent,
-    SginInComponent,
-    SginUpComponent,
-    ForgetPasswordComponent,
-  ],
+  declarations: [AuthComponent, SginInComponent, SginUpComponent],
   imports: [
-    CommonModule, 
+    CommonModule,
     RouterModule.forChild(routes),
     ReactiveFormsModule,
+    TranslateModule,
   ],
 })
 export class AuthModule {}

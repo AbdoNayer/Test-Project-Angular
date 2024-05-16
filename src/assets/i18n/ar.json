@@ -16,9 +16,13 @@
     "Product_Number": "رقم المنتج",
     "Product_Image": "صوره المنتج",
     "Product_Title": "اسم المنتج",
+    "Product_Price": "سعر المنتج",
     "Section_Name": "اسم القسم",
     "Details": "التفاصيل",
     "Setting": "الأعدادات"
+  },
+  "USER" : {
+    "" : ""
   },
   "DIALOG" : {
     "Text_Remove_Item": "هل تريد حذف المنتج ؟",
@@ -28,6 +32,31 @@
     "Cancel": "إالغاء",
     "Yes": "نعم",
     "Edit": "تعديل"
+  },
+  "AUTH": {
+    "Info_SginIn": "تسجيل الدخول باستخدام البيانات التي قمت بإدخالها أثناء التسجيل",
+    "Info_SignUp": "تسجيل الدخول باستخدام البيانات التي قمت بإدخالها أثناء التسجيل",
+    "Sgin_In": "تسجيل الدخول",
+    "Sign_Up": "سجل",
+    "First_Name": "الاسم الأول",
+    "FirstName_Required": "الاسم الأول مطلوب.",
+    "Characters_FirstName": "يجب أن يكون الاسم الأول على الأقل 4 أحرف.",
+    "Last_Name": "اسم العائلة",
+    "LastName_Required": "اسم العائلة مطلوب.",
+    "Characters_LastName": "يجب أن يكون اسم العائلة على الأقل 4 أحرف.",
+    "Email": "البريد الإلكتروني",
+    "Email_Required": "البريد الإلكتروني مطلوب.",
+    "Invalid_Email": "تنسيق البريد الإلكتروني غير صحيح.",
+    "Password": "كلمة المرور",
+    "Password_Required": "كلمة المرور مطلوبة.",
+    "Characters_Password": "يجب أن تكون كلمة المرور على الأقل 6 أحرف.",
+    "Confirm_Password": "تأكيد كلمة المرور",
+    "Pass_Dont_Match": "كلمات المرور غير متطابقة.",
+    "Forgot_Password": "هل نسيت كلمة المرور ؟",
+    "Reset_Password": "إعادة تعيين كلمة المرور",
+    "Keep_Logged": "البقاء متصلاً ؟",
+    "Dont_Have_Acc": "ليس لديك حساب ؟",
+    "Do_Have_Acc": "هل لديك حساب ؟"
   },
   "TOAST": {
     "Toast_Success": "تم الاضافه بنجاح",

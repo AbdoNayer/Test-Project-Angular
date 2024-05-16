@@ -1,66 +1,62 @@
 <div class="w-full p-4">
   <div mat-dialog-content>
-    <h4 class="font-bold text-[25px] text-black">
-      {{this.item.title}}
-    </h4>
+    <div class="border-b pb-5">
+      <h4 class="font-bold text-[22px] text-black">
+        {{ this.item.title }}
+      </h4>
+    </div>
     <form action="" class="py-4">
-      <div class="mb-8">
-        <!--TODO: THIS NEEDS TO BE REFACTORED TO BIND THE FILE WITH THE FORM INPUT-->
-        <label class="form-label fw-bolder text-dark fs-6">Category Icon</label>
-        <div class="uploade-image m-auto d-flex align-items-center justify-content-center">
+      <div class="mb-8 text-center">
+        <div
+          class="uploade-image m-auto d-flex align-items-center justify-content-center"
+        >
           <div class="">
-              <img [src]="this.item.item.thumbnail">
-              <div>Click To Change Icon</div>
+            <img
+              [src]="this.item.item.thumbnail"
+              class="w-[100px] h-[100px] rounded m-auto"
+            />
+            <label class="font-bold text-[15px]">{{
+              "TABLE.Product_Image" | translate
+            }}</label>
           </div>
-          <!-- <img *ngIf="!category.thumbnail" src={{url}}> -->
-          <!-- <img *ngIf="category.thumbnail" [src]="category.thumbnail"> -->
-          <!-- <div class="over-img d-flex align-items-center justify-content-center flex-column text-center" *ngIf="!f['thumbnail'].value">
-            <button class="d-flex align-items-center justify-content-center mb-5">
-              <mat-icon>cloud_upload</mat-icon>
-            </button>
-            <h5>
-              <span class="font-weight-bold mb-4 d-inline-block me-2">Select your category icon</span>
-              <span style="color: #0076BF;"  class="font-weight-bold d-inline-block">browse files</span>
-              <br/>
-              <span style="font-weight: lighter;" class="mb-4 d-inline-block">Accepted formats: PNG, JPG.</span>
-              <br/>
-              <span style="font-weight: lighter;">Maximum size: 2m MB</span>
-            </h5>
-          </div> -->
-          <!-- <input type="file" #thumbnail accept="image/png, application/pdf, image/jpeg, image/jpg" (change)="selectFile($event)"> -->
         </div>
       </div>
       <div class="mb-3">
-        <label for="" class="">{{ 'TABLE.Product_Number' | translate }}</label>
+        <label for="" class="font-bold text-[15px] mb-2 block">{{ "TABLE.Product_Title" | translate }}</label>
         <input
           type="text"
           placeholder=""
           class="w-full px-2 h-[40px] border rounded"
+          [value]="this.item.item.title"
+          disabled
         />
       </div>
       <div class="mb-3">
-        <label for="" class="">{{ 'TABLE.Product_Title' | translate }}</label>
+        <label for="" class="font-bold text-[15px] mb-2 block">{{ "TABLE.Product_Price" | translate }}</label>
+        <div class="relative">
+          <input
+            type="text"
+            placeholder=""
+            class="w-full px-2 h-[40px] border rounded"
+            [value]="this.item.item.price"
+            disabled
+          />
+          <span [ngClass]="setLang === 'ar' ? 'left-[10px]' : 'right-[10px]'" class="absolute top-[50%] translate-y-[-50%]">$</span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="" class="font-bold text-[15px] mb-2 block">{{ "TABLE.Section_Name" | translate }}</label>
         <input
           type="text"
           placeholder=""
           class="w-full px-2 h-[40px] border rounded"
+          [value]="this.item.item.category"
+          disabled
         />
       </div>
       <div class="mb-3">
-        <label for="" class="">{{ 'TABLE.Section_Name' | translate }}</label>
-        <input
-          type="text"
-          placeholder=""
-          class="w-full px-2 h-[40px] border rounded"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="" class="">{{ 'TABLE.Details' | translate }}</label>
-        <input
-          type="text"
-          placeholder=""
-          class="w-full px-2 h-[40px] border rounded"
-        />
+        <label for="" class="font-bold text-[15px] mb-2 block">{{ "TABLE.Details" | translate }}</label>
+        <textarea class="w-full p-2 h-[40px] border rounded min-h-[130px] resize-none" disabled>{{ this.item.item.description }}</textarea>
       </div>
     </form>
   </div>
@@ -68,12 +64,6 @@
     mat-dialog-actions
     class="flex !items-center !justify-center w-full max-w-full"
   >
-    <button
-      class="mx-2 relative bg-[#fb6d3a] rounded text-white w-[100px] h-[35px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
-      (click)="onNoClick()"
-    >
-      {{ "DIALOG.Edit" | translate }}
-    </button>
     <button
       class="mx-2 relative bg-gray-500 rounded text-white w-[100px] h-[35px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
       mat-dialog-close

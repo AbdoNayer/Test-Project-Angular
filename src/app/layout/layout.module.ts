@@ -38,6 +38,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('../pages/cart/cart.module').then((m) => m.CartModule),
       },
+      {
+        path: 'user',
+        loadChildren: () =>
+          import('../pages/user/user.module').then((m) => m.UserModule),
+      },
     ],
   },
 ];

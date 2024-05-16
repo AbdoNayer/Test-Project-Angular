@@ -1,0 +1,59 @@
+<div class="w-full pt-[70px]">
+  <div class="max-w-[600px] m-auto">
+    <div class="py-4">
+      <div class="mb-8 text-center">
+        <div
+          class="uploade-image m-auto d-flex align-items-center justify-content-center"
+        >
+          <div class="">
+            <img [src]="text" class="w-[100px] h-[100px] rounded m-auto" />
+            <label class="font-bold text-[15px]">{{
+              "TABLE.Product_Image" | translate
+            }}</label>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="" class="font-bold text-[15px] mb-2 block">{{
+          "TABLE.Product_Title" | translate
+        }}</label>
+        <input
+          type="text"
+          placeholder=""
+          class="w-full px-2 h-[40px] border rounded"
+          [value]="text"
+          disabled
+        />
+      </div>
+      <div class="mb-3">
+        <label for="" class="font-bold text-[15px] mb-2 block">{{
+          "TABLE.Section_Name" | translate
+        }}</label>
+        <input
+          type="text"
+          placeholder=""
+          class="w-full px-2 h-[40px] border rounded"
+          [value]="text"
+          disabled
+        />
+      </div>
+      <div class="mb-3">
+        <label for="" class="font-bold text-[15px] mb-2 block">{{
+          "TABLE.Details" | translate
+        }}</label>
+        <textarea
+          class="w-full p-2 h-[40px] border rounded min-h-[130px] resize-none"
+          disabled
+          >{{ text }}</textarea
+        >
+      </div>
+    </div>
+    <div class="flex items-center justify-center w-full max-w-full">
+      <button
+        class="mx-2 relative bg-gray-500 rounded text-white w-[100px] h-[35px] flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+      >
+        {{ "DIALOG.Cancel" | translate }}
+      </button>
+    </div>
+  </div>
+</div>
