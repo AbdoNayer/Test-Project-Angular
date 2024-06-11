@@ -28,20 +28,23 @@ export class SginInComponent implements OnInit {
   initForm() {
     this.signInForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
+      userName: ['userName'],
+      verified: [true],
+      blocked: [false],
       password: ['', [Validators.required]],
     });
   }
 
   onSubmit() {
     const obj = {
-      username: 'kminchelle',
-      password: '0lelplR',
+      username: 'emilys',
+      password: 'emilyspass',
       expiresInMins: 30,
     };
     this.authService.sginIn(obj).subscribe(
       (response) => {
         // Handle successful response
-        this.router.navigate(['/']);
+        // this.router.navigate(['/']);
         localStorage.setItem('userToken', response.token);
         this.saveUserService.saveCurrentUser();
       },

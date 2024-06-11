@@ -1,0 +1,1 @@
+import{Aa as n,Q as i,vb as r}from"./chunk-OS6QCVUW.js";var a=(()=>{let e=class e{};e.\u0275fac=function(o){return new(o||e)},e.\u0275cmp=i({type:e,selectors:[["app-user"]],decls:1,vars:0,template:function(o,s){o&1&&n(0,"router-outlet")},dependencies:[r]});let t=e;return t})();export{a};

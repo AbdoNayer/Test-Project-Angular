@@ -1,0 +1,72 @@
+{
+  "GENERAL": {
+    "APP_NAME": "",
+    "No_Data": "No Data Found",
+    "No_Found_Page": "No Data For This Page",
+    "Go_To_Home": "Go To Home",
+    "Show_More": "Show More"
+  },
+  "SELECT_FILTER": {
+    "Categories": "Categories"
+  },
+  "ITEMS": {
+    "Add_To_Cart": "Add Cart"
+  },
+  "TABLE": {
+    "Product_Number": "Product Number",
+    "Product_Image": "Product Image",
+    "Product_Title": "Product Title",
+    "Product_Price": "Product Price",
+    "Section_Name": "Section Name",
+    "Details": "Details",
+    "Setting": "Setting"
+  },
+  "AUTH": {
+    "Info_SginIn": "log in with your data that you entered during your registration",
+    "Info_SignUp": "log in with your data that you entered during your registration",
+    "Sgin_In": "Sgin In",
+    "Sign_Up": "Sign Up",
+    "First_Name": "First Name",
+    "FirstName_Required": "first name is required.",
+    "Characters_FirstName": "first name must be at least 4 characters long.",
+    "Last_Name": "Last Name",
+    "LastName_Required": "Last name is required.",
+    "Characters_LastName": "Last name must be at least 4 characters long.",
+    "Email": "Email",
+    "Email_Required": "Email is required.",
+    "Invalid_Email": "Invalid email format.",
+    "Password": "Password",
+    "Password_Required": "Password is required.",
+    "Characters_Password": "Password must be at least 6 characters long.",
+    "Confirm_Password": "Confirm Password",
+    "Pass_Dont_Match": "Passwords do not match.",
+    "Forgot_Password": "Forgot password ?",
+    "Reset_Password": "Reset password",
+    "Keep_Logged": "Keep me logged in ?",
+    "Dont_Have_Acc": "Don’t have an account ?",
+    "Do_Have_Acc": "Do you have an account ?"
+  },
+  "DIALOG": {
+    "Text_Remove_Item": "Do You Want Delete this Item ?",
+    "Remove_All_Products": "Remove All Product",
+    "All_Products": "All Products",
+    "Edit_Product": "Edit Product",
+    "Cancel": "Cancel",
+    "Yes": "Yes",
+    "Edit": "Edit"
+  },
+  "TOAST": {
+    "Toast_Success": "Successfully Added",
+    "Toast_Error": "Something Went Wrong .. Try Again"
+  },
+  "TEXT": {},
+  "HEADER": {
+    "Home": "Home",
+    "About": "About Us",
+    "Categories": "Categories",
+    "Offers": "Offers",
+    "Contact": "Contact Us",
+    "SignIn": "Sign In",
+    "SignUp": "Sgin Up"
+  }
+}
