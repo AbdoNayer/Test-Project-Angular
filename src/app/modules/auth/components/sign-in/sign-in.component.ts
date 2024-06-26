@@ -44,7 +44,7 @@ export class SginInComponent implements OnInit {
     this.authService.sginIn(obj).subscribe(
       (response) => {
         // Handle successful response
-        // this.router.navigate(['/']);
+        this.router.navigate(['/']);
         localStorage.setItem('userToken', response.token);
         this.saveUserService.saveCurrentUser();
       },

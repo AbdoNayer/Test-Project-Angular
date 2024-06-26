@@ -21,7 +21,6 @@ export class SaveUserService {
   saveCurrentUser(){
     const token:any = localStorage.getItem('userToken');
     this.currentUser.next(jwtDecode(token));
-
   }
 
   logOut(){
