@@ -34,15 +34,16 @@ export class SginInComponent implements OnInit {
 
   onSubmit() {
     const obj = {
-      username: 'kminchelle',
-      password: '0lelplR',
+      username: 'emilys',
+      password: 'emilyspass',
       expiresInMins: 30,
     };
     this.authService.sginIn(obj).subscribe(
       (response) => {
+        console.log('Login response', response);
         // Handle successful response
         this.router.navigate(['/']);
-        localStorage.setItem('userToken', response.token);
+        localStorage.setItem('userToken', response.accessToken);
         this.saveUserService.saveCurrentUser();
       },
       (error) => {
