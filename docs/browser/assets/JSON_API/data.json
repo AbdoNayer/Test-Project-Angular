@@ -1,0 +1,78 @@
+{
+    "sliderCategory" : [
+        {
+            "id" : 1,
+            "title" : "Smart Phone",
+            "disc" : "This includes the physical components of a smartphone such as the processor, RAM, storage, display, camera, battery, and design. Each of these components plays a crucial role in determining a smartphone's performance and user experience.",
+            "image" : "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
+        },
+        {
+            "id" : 2,
+            "title" : "LapTop",
+            "disc" : "Laptops come in various form factors and types, including traditional clamshell laptops, 2-in-1 convertibles (which can convert between laptop and tablet modes), ultra-portables, gaming laptops, and workstation laptops. Each type caters to different user needs and preferences.",
+            "image" : "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
+        },
+        {
+            "id" : 3,
+            "title" : "Fragrances",
+            "disc" : "Fragrances are composed of various ingredients, including natural extracts (from flowers, fruits, spices, and woods), synthetic compounds, and fixatives. These ingredients are carefully blended to create complex scent profiles with top, middle, and base notes, which unfold over time after application.",
+            "image" : "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+        },
+        {
+            "id" : 4,
+            "title" : "Skincare",
+            "disc" : "A basic skincare routine typically involves cleansing, toning, moisturizing, and sun protection. Cleansing removes dirt, oil, and impurities from the skin, while toning helps balance the skin's pH and tighten pores. Moisturizing replenishes hydration and maintains the skin's barrier function, while sunscreen protects against UV radiation and premature aging.",
+            "image" : "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg"
+        },
+        {
+            "id" : 5,
+            "title" : "Groceries",
+            "disc" : "Groceries encompass a wide range of food and household items, including fresh produce (fruits, vegetables), dairy products (milk, cheese, yogurt), proteins (meat, poultry, fish, tofu), grains (bread, rice, pasta), pantry staples (canned goods, spices, oils), snacks, beverages, and cleaning supplies.",
+            "image" : "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg"
+        },
+        {
+            "id" : 6,
+            "title" : "Home Decoration",
+            "disc" : "Color plays a crucial role in home decoration, influencing the mood, atmosphere, and perception of space. Choosing the right color palette involves considering factors such as personal preferences, room size, natural light, and intended ambiance. Warm colors like reds, oranges, and yellows evoke energy and warmth, while cool colors like blues, greens, and purples promote relaxation and serenity.",
+            "image" : "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg"
+        }
+    ],
+    "itemsCategory" : [
+        {
+            "id" : 2,
+            "title" : "LapTop",
+            "value" : "laptops",
+            "image" : "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
+        },
+        {
+            "id" : 1,
+            "title" : "Smart Phone",
+            "value" : "smartphones",
+            "image" : "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
+        },
+        {
+            "id" : 3,
+            "title" : "Fragrances",
+            "value" : "fragrances",
+            "image" : "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+        },
+        {
+            "id" : 4,
+            "title" : "Skincare",
+            "value" : "skincare",
+            "image" : "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg"
+        },
+        {
+            "id" : 5,
+            "title" : "Groceries",
+            "value" : "groceries",
+            "image" : "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg"
+        },
+        {
+            "id" : 6,
+            "title" : "Home Decoration",
+            "value" : "home-decoration",
+            "image" : "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg"
+        }
+    ]
+}

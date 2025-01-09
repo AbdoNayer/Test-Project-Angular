@@ -28,6 +28,9 @@ export class SginInComponent implements OnInit {
   initForm() {
     this.signInForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
+      userName: ['userName'],
+      verified: [true],
+      blocked: [false],
       password: ['', [Validators.required]],
     });
   }
