@@ -12,7 +12,7 @@ export class SaveUserService {
 
   constructor(private router: Router) {
 
-    if(localStorage.getItem('userToken') != null) {
+    if(localStorage.getItem('userToken') != null || localStorage.getItem('userToken') != undefined) {
       this.saveCurrentUser();
     }
 

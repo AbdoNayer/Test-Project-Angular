@@ -51,6 +51,7 @@ export class SginInComponent implements OnInit {
       },
       (error) => {
         // Handle error
+        console.error('-------------------------');
         console.error('Login error', error);
       }
     );
